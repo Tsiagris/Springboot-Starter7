@@ -24,7 +24,7 @@ public class HelloRestController {
         TeacherReadOnlyDTO readOnlyDTO = new TeacherReadOnlyDTO(1L, "Αθανασιος", "Ανδρουτσος");
 
         if(Objects.equals(id, 1L)) {
-            return new ResponseEntity<>(readOnlyDTO, HttpStatus.Ok);
+            return new ResponseEntity<>(readOnlyDTO, HttpStatus.OK);
         } else {
             return new  ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
