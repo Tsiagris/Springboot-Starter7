@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Εισαγωγή Καθηγητή</title>
+</head>
+<body>
+  <div th:object="${teacherinsertDTO}">
+
+    <form action="" method="POST">
+      <div>
+        <span>Εισαγωγή Καθηγητή</span>
+      </div>
+      <div>
+        <input type="text" placeholder="Εισάγετε όνομα" th:field="*{firstname}">
+        <p th:if="${#fields.hasErros('firstname')}" th:errors="*{'firstname'}"></p>
+      </div>
+
+      <div>
+        <input type="text" placeholder="Εισάγετε Επώνυμο" th:field="*{lastname}">
+        <p th:if="${#fields.hasErros('lasstname')}" th:errors="*{lastname}"></p>
+      </div>
+    </form>
+
+
+  </div>
+</body>
+</html>
